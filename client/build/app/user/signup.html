@@ -1,0 +1,50 @@
+<div class="container top" ng-controller="SignUp as siup">
+    <div class="row top">
+        <div class="col-md-4 col-md-offset-4">
+            <h2 class="text-center">Sign Up</h2>
+            <form name="signUp" novalidate>
+                <div class="form-group">
+                    <label for="firstName">First Name</label>
+                    <input type="text" name="firstName" class="form-control" placeholder="First Name" ng-model="siup.user.FirstName" id="firstName" required>
+                    <div ng-messages="signUp.firstName.$error" ng-if="signUp.firstName.$dirty">
+                        <div class="help-block" ng-message="required">First Name Required</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" name="lastName" class="form-control" placeholder="Last Name" ng-model="siup.user.LastName" id="lastName" required>
+                    <div ng-messages="signUp.lastName.$error" ng-if="signUp.lastName.$dirty">
+                        <div class="help-block" ng-message="required">Last Name Required</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="useremail">Email</label>
+                    <input type="email" name="email" class="form-control" placeholder="Email" ng-model="siup.user.email" id="useremail" required>
+                    <div ng-messages="signUp.email.$error" ng-if="signUp.email.$dirty">
+                        <div class="help-block" ng-message="required">Email id Required</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" class="form-control" placeholder="Password between (4-14 Charecters)" ng-model="siup.user.password" id="password" minlength="4" maxlength="14" required>
+                    <div ng-messages="signUp.password.$error" ng-if="signUp.password.$dirty">
+                        <div class="help-block"  ng-message="required">Password Required</div>
+                        <div class="help-block"  ng-message="minlength">Password too short (min 4)</div>
+                        <div class="help-block"  ng-message="maxlength">Password too long (max 14)</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="confirm-password">Confirm Password</label>
+                    <input type="password" name="confirmPassword" class="form-control" placeholder="Confirm Password" ng-pattern="{{siup.user.password}}" ng-model="cpassword" id="confirm-password" required>
+                    <div ng-messages="signUp.confirmPassword.$error" ng-if="signUp.confirmPassword.$dirty">
+                        <div class="help-block"  ng-message="required">Password Confirmation Required</div>
+                        <div class="help-block"  ng-message="pattern">Password did not match</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-success btn-block" type="submit" ng-click="siup.addUser(siup.user)">Sign Up</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

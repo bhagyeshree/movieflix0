@@ -1,0 +1,65 @@
+<div class="container top" ng-controller="SeriesController as sVm">
+    <div class="row">
+        <div class="sorting-bar">
+            <form class="form-inline">
+                <input type="search" ng-model="sVm.searchText" class="form-control" placeholder="Search By Titles/Year">
+                <div class="form-group">
+                    <label class="" for="sorting-genre">Genre&nbsp;:</label>
+                    <select class="form-control" ng-model="sVm.genre" id="sorting-genre" name="sorting">
+                        <option value="">SUBGENRES</option>
+                        <option value="Action">Action</option>
+                        <option value="Adventure">Adventure</option>
+                        <option value="Animation">Animation</option>
+                        <option value="Biography">Biography</option>
+                        <option value="Comedy">Comedy</option>
+                        <option value="Crime">Crime</option>
+                        <option value="Drama">Drama</option>
+                        <option value="Family">Family</option>
+                        <option value="Fantasy">Fantasy</option>
+                        <option value="History">History</option>
+                        <option value="Horror">Horror</option>
+                        <option value="Mystery">Mystery</option>
+                        <option value="Romance">Romance</option>
+                        <option value="Sci-Fi">Sci-Fi</option>
+                        <option value="Thriller">Thriller</option>
+                        <option value="Western">Western</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="" for="sorting">Sort By&nbsp;:</label>
+                    <select class="form-control" ng-model="sVm.sorting" id="sorting" name="sorting">
+                        <option value="">SUGGESTIONS FOR YOU</option>
+                        <option value="ImdbVotes">Imdb Votes</option>
+                        <option value="ImdbRating">Imdb Ratings</option>
+                    </select>
+                </div>
+            </form>
+        </div>
+        <h2>Series</h2>
+        <ul class="breadcrumb">
+            <li><a href="">Series</a></li>
+            <li class="active" ng-if="sVm.genre">{{sVm.genre}}<a href=""></a></li>
+            <li class="active" ng-if="sVm.sorting">{{sVm.sorting}}<a href=""></a></li>
+        </ul>
+    </div>
+    <div class="row">
+        <div class="col-md-2"
+             ng-repeat="m  in filtered = (sVm.series | filter:sVm.searchText | orderBy:'-'+sVm.sorting | filter:sVm.genre) | startFrom:(sVm.currentPage - 1) * sVm.pageSize | limitTo: sVm.pageSize">
+            <div class="thumbnail">
+                <a ng-href="index.html#!/series/{{m.TitleId}}" title="{{m.Title}}">
+                    <figure>
+                        <img ng-src="{{m.Poster}}"
+                             alt="banner_img" class="moviebanner">
+                    </figure>
+                </a>
+            </div>
+        </div>
+        <div class="text-center" ng-if="filtered.length==0">
+            <h3>No Listings Found Related to your search</h3>
+        </div>
+    </div>
+
+    <div class="right" ng-show="filtered.length>mVm.pageSize">
+        <ul uib-pagination total-items="filtered.length" ng-model="sVm.currentPage" items-per-page="sVm.pageSize"></ul>
+    </div>
+</div>

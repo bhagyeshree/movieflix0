@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Movieflix website to watch movies and series online">
+    <meta name="keywords" content="Movieflix, online movies, online series">
+    <meta name="author" content="Koushik Chaganti">
+    <title>Title Details - Movieflix</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<header></header>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#"><span class="brandcolor">MovieFlix</span></a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="movies.html">Movies</a></li>
+                <li><a href="series.html">Series</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <form class="navbar-form navbar-left">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search By Titles/Genres">
+                        <div class="input-group-btn">
+                            <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Koushik Name
+                        <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Your Account</a></li>
+                        <li><a href="#">Sign out</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="container top">
+    <div class="row">
+        <h2>Movie</h2>
+        <ul class="breadcrumb">
+            <li><a href="">Movie</a></li>
+            <li class="active">Drama<a href=""></a></li>
+        </ul>
+    </div>
+    <div class="row">
+        <h2>The Avengers&nbsp;<sup>(2014)</sup></h2>
+        <p><span class="label label-warning">PG-13</span>&nbsp;|&nbsp;<span class="label label-success">Avg. Rating 3.4/<sub>5</sub></span>
+            &nbsp;|&nbsp;<span class="label label-info">141 min</span>&nbsp;|&nbsp;<span class="label label-primary">Action, Adventure, Sci-Fi</span>&nbsp;|&nbsp;<span class="label label-danger">2015-05-01 (USA)</span>&nbsp;|&nbsp;<span class="label label-default">English</span>&nbsp;
+            |&nbsp;<span class="label label-primary">66 Metascore</span>&nbsp;|&nbsp;<span class="label label-default">IMDB&nbsp;Votes&nbsp;:&nbsp;673456</span>&nbsp;|&nbsp;<span class="label label-success">IMDB&nbsp;Rating&nbsp;:&nbsp;7.6</span>
+            &nbsp;|&nbsp;<a title="Go to IMDB Page" href="http://www.imdb.com/title/tt2395427" target="_blank"><span class="label label-primary">IMDB&nbsp;Id&nbsp;:&nbsp;tt2395427</span></a>
+        </p>
+        <div class="media">
+            <div class="media-left">
+                <img src="http://ia.media-imdb.com/images/M/MV5BMjM2Nzg4MzkwOF5BMl5BanBnXkFtZTgwNzA0OTE3NjE@._V1_SX300.jpg" alt="movie_poster">
+                <div>
+                    <div class="star">
+                       <form id="rating">
+                        <input type="radio" name="rating" value="5" id="5">
+                        <label for="5"></label>
+                        <input type="radio" name="rating" value="4" id="4">
+                        <label for="4"></label>
+                        <input type="radio" name="rating" value="3" id="3">
+                        <label for="3"></label>
+                        <input type="radio" name="rating" value="2" id="2">
+                        <label for="2"></label>
+                        <input type="radio" name="rating" value="1" id="1">
+                        <label for="1"></label>
+                    </form>
+                    </div>
+                </div>
+            </div>
+            <div class="media-body hidden-xs">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/z4UDNzXD3qA"></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="media">
+            <div class="media-left">
+                <h3>Details</h3>
+                <p>
+                    <span><strong>Director&nbsp;</strong>:&nbsp;Joss Whedon</span>
+                    <span><strong>Writer&nbsp;</strong>:&nbsp;Joss Whedon, Stan Lee (Marvel comics), Jack Kirby (Marvel comics)</span>
+                    <span><strong>Actors&nbsp;</strong>:&nbsp;Robert Downey Jr., Chris Hemsworth, Mark Ruffalo, Chris Evans</span>
+                    <span><strong>Awards&nbsp;</strong>:&nbsp;1 win & 12 nominations.</span>
+                    <span class="text-justify"><strong>Plot&nbsp;</strong>:&nbsp;When Tony Stark and Bruce Banner try to jump-start a dormant peacekeeping program called Ultron, things go horribly wrong and it's up to Earth's Mightiest Heroes to stop the villainous Ultron from enacting his terrible plans.</span>
+                </p>
+            </div>
+        </div>
+        <div class="media">
+            <h3 class="media-heading">Comments</h3>
+            <div class="media-left">
+                    <img class="media-object" src="images/download.svg" alt="profile_picture">
+            </div>
+            <div class="media-body">
+                 <form>
+                     <div class="form-group">
+                         <textarea class="form-control" placeholder="Add a public comment"></textarea>
+                     </div>
+                     <div class="btn-toolbar right">
+                         <button type="submit" class="btn btn-danger">Cancel</button>
+                         <button type="button" class="btn btn-primary">Comment</button>
+                     </div>
+                 </form>
+            </div>
+        </div>
+        <div class="media">
+            <div class="media-left media-middle">
+                    <img class="media-object" src="images/download.svg" alt="profile_picture">
+            </div>
+            <div class="media-body">
+                <h4>User Name</h4>
+                <p>Hi this was nice movie</p>
+            </div>
+        </div>
+        <div class="media">
+            <div class="media-left media-middle">
+                    <img class="media-object" src="images/download.svg" alt="profile_picture">
+            </div>
+            <div class="media-body">
+                <h4>User Name</h4>
+                <p>Hi this was nice movie</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid"></div>
+<footer class="panel-footer footer">
+    <div class="container">
+        <p class="text-center">&copy;&nbsp;All Copyights Reserved&nbsp;2016</p>
+    </div>
+</footer>
+
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>

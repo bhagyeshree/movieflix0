@@ -1,0 +1,88 @@
+<div class="container top" ng-controller="TitleDetails as title">
+    <div class="row">
+        <h2 class="text-capitalize">{{title.movie.Type}}</h2>
+        <ul class="breadcrumb">
+            <li class="text-capitalize"><a href="">{{title.movie.Type}}</a></li>
+            <li class="active text-capitalize">{{title.movie.Genre}}<a href=""></a></li>
+        </ul>
+    </div>
+    <div class="row">
+        <h2>{{title.movie.Title}}&nbsp;<sup>({{title.movie.Year}})</sup></h2>
+        <p><span class="label label-warning">{{title.movie.Rated}}</span>&nbsp;|&nbsp;<span class="label label-success">Avg. Rating {{title.movie.AvgRating}}/<sub>5</sub></span>
+            &nbsp;|&nbsp;<span class="label label-info">{{title.movie.Runtime}}</span>&nbsp;|&nbsp;<span
+                    class="label label-primary">{{title.movie.Genre}}</span>&nbsp;|&nbsp;<span
+                    class="label label-danger">{{title.movie.Released}} ({{title.movie.Country}})</span>&nbsp;|&nbsp;<span
+                    class="label label-default">{{title.movie.Language}}</span>&nbsp;
+            |&nbsp;<span class="label label-primary">{{title.movie.Metascore}} Metascore</span>&nbsp;|&nbsp;<span
+                    class="label label-default">IMDB&nbsp;Votes&nbsp;:&nbsp;{{title.movie.ImdbVotes}}</span>&nbsp;|&nbsp;<span
+                    class="label label-success">IMDB&nbsp;Rating&nbsp;:&nbsp;{{title.movie.ImdbRating}}</span>
+            &nbsp;|&nbsp;<a title="Go to IMDB Page" href="http://www.imdb.com/title/{{title.movie.ImdbID}}"
+                            target="_blank"><span class="label label-primary">IMDB&nbsp;Id&nbsp;:&nbsp;{{title.movie.ImdbID}}</span></a>
+        </p>
+        <div class="media">
+            <div class="media-left">
+                <img ng-src="{{title.movie.Poster}}" alt="{{title.movie.Title}} movie_poster">
+                <div>
+                    <div class="star">
+                        <form id="rating">
+                            <input type="radio" name="rating" value="5" id="5">
+                            <label for="5"></label>
+                            <input type="radio" name="rating" value="4" id="4">
+                            <label for="4"></label>
+                            <input type="radio" name="rating" value="3" id="3">
+                            <label for="3"></label>
+                            <input type="radio" name="rating" value="2" id="2">
+                            <label for="2"></label>
+                            <input type="radio" name="rating" value="1" id="1">
+                            <label for="1"></label>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="media-body hidden-xs">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/z4UDNzXD3qA"></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="media">
+            <div class="media-left">
+                <h3>Details</h3>
+                <p>
+                    <span><strong>Director&nbsp;</strong>:&nbsp;{{title.movie.Director}}</span>
+                    <span><strong>Writer&nbsp;</strong>:&nbsp;{{title.movie.Writer}}</span>
+                    <span><strong>Actors&nbsp;</strong>:&nbsp;{{title.movie.Actors}}</span>
+                    <span><strong>Awards&nbsp;</strong>:&nbsp;{{title.movie.Awards}}</span>
+                    <span class="text-justify"><strong>Plot&nbsp;</strong>:&nbsp;{{title.movie.Plot}}</span>
+                </p>
+            </div>
+        </div>
+        <div class="media">
+            <h3 class="media-heading">Comments</h3>
+            <div class="media-left">
+                <img class="media-object" src="../../../movieflix-ng/assets/images/download.svg"
+                     alt="testprofile_picture">
+            </div>
+            <div class="media-body">
+                <form>
+                    <div class="form-group">
+                        <textarea class="form-control" placeholder="Add a public comment"></textarea>
+                    </div>
+                    <div class="btn-toolbar right">
+                        <button type="submit" class="btn btn-danger">Cancel</button>
+                        <button type="button" class="btn btn-primary">Comment</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="media" ng-repeat="c in title.movie.Comments">
+            <div class="media-left media-middle">
+                <img class="media-object" src="../../../movieflix-ng/assets/images/download.svg">
+            </div>
+            <div class="media-body">
+                <h4>{{c.user.UserId}}</h4>
+                <p>{{c.Comment}}</p>
+            </div>
+        </div>
+    </div>
+</div>

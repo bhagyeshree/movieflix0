@@ -1,0 +1,30 @@
+<div class="container top bottom">
+    <div class="row" ng-controller="MovieController as mVm">
+        <h2>Top Movies</h2>
+        <div class="col-md-2" ng-repeat="m in mVm.movies | orderBy:'-ImdbRating' | limitTo: 12">
+            <div class="thumbnail">
+                <a ng-href="index.html#!/movies/{{m.TitleId}}" title="{{m.Title}}">
+                    <figure>
+                        <img ng-src="{{m.Poster}}"
+                             alt="banner_img" class="moviebanner">
+                    </figure>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row" ng-controller="SeriesController as sVm">
+        <h2>Top Series</h2>
+        <div class="col-md-2" ng-repeat="s in sVm.series | orderBy:'-ImdbRating' | limitTo: 12">
+            <div class="thumbnail">
+                <a ng-href="index.html#!/series/{{s.TitleId}}" title="{{s.Title}}">
+                    <figure>
+                        <img ng-src="{{s.Poster}}"
+                             alt="banner_img" class="moviebanner">
+                    </figure>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

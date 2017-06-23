@@ -1,0 +1,110 @@
+<div class="container" ng-controller="EditController as ectl">
+    <form class="col-md-6 col-md-offset-3 top bottom" name="editMovie">
+        <h2>UPDATE TITLE</h2>
+        <div class="form-group">
+            <input type="hidden" class="form-control" name="titleId" ng-model="ectl.title.TitleId" required>
+            <div ng-messages="editMovie.titleId.$error" ng-if="editMovie.titleId.$dirty">
+                <div class="help-block" ng-message="required">Invalid Title</div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="title">Title</label>
+            <input type="text" class="form-control" name="title" ng-model="ectl.title.Title" id="title" placeholder="Enter Movie Title" required>
+            <div ng-messages="editMovie.title.$error" ng-if="editMovie.title.$dirty">
+                <div class="help-block" ng-message="required">Title Required</div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="movietype">Movie Type</label>
+            <select class="form-control" id="movietype" ng-model="ectl.title.Type" name="movietype" required>
+                <option value="">MOVIE TYPE</option>
+                <option value="movie">Movie</option>
+                <option value="series">Series</option>
+            </select>
+            <div ng-messages="editMovie.movietype.$error" ng-if="editMovie.movietype.$dirty">
+                <div class="help-block" ng-message="required">Type Required</div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="year">Year</label>
+            <input type="text" class="form-control" ng-model="ectl.title.Year" placeholder="Year" id="year">
+        </div>
+        <div class="form-group">
+            <label for="rated">Rated</label>
+            <input type="text" class="form-control" ng-model="ectl.title.Rated" placeholder="Rated" id="rated">
+        </div>
+        <div class="form-group">
+            <label for="released">Released</label>
+            <input type="text" class="form-control" ng-model="ectl.title.Released" id="released">
+        </div>
+        <div class="form-group">
+            <label for="runtime">Runtime</label>
+            <input type="text" class="form-control" ng-model="ectl.title.Runtime" placeholder="Runtime" id="runtime">
+        </div>
+        <div class="form-group">
+            <label for="sorting-genre">Genre&nbsp;:</label>
+            <input type="text" class="form-control" name="genre" ng-model="ectl.title.Genre" placeholder="Genre" id="sorting-genre" required>
+            <div ng-messages="editMovie.genre.$error" ng-if="editMovie.genre.$dirty">
+                <div class="help-block" ng-message="required">Genre Required</div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="director">Director</label>
+            <input type="text" class="form-control" ng-model="ectl.title.Director" placeholder="Director" id="director">
+        </div>
+        <div class="form-group">
+            <label for="writer">Writer</label>
+            <input type="text" class="form-control" ng-model="ectl.title.Writer" placeholder="Writer" id="writer">
+        </div>
+        <div class="form-group">
+            <label for="actors">Actors</label>
+            <input type="text" class="form-control" ng-model="ectl.title.Actors" placeholder="Actors" id="actors">
+        </div>
+        <div class="form-group">
+            <label for="plot">Plot</label>
+            <textarea class="form-control" id="plot" ng-model="ectl.title.Plot" placeholder="Enter plot details"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="language">Language</label>
+            <input type="text" class="form-control" name="language" ng-model="ectl.title.Language" placeholder="Language" id="language" required>
+            <div ng-messages="editMovie.language.$error" ng-if="editMovie.language.$dirty">
+                <div class="help-block" ng-message="required">Language Required</div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="country">Country</label>
+            <input type="text" class="form-control" name="country" ng-model="ectl.title.Country" placeholder="Country" id="country" required>
+            <div ng-messages="editMovie.country.$error" ng-if="editMovie.country.$dirty">
+                <div class="help-block" ng-message="required">Country Required</div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="awards">Awards</label>
+            <input type="text" class="form-control" ng-model="ectl.title.Awards" placeholder="Title Awards" id="awards">
+        </div>
+        <div class="form-group">
+            <label for="poster">Poster URL</label>
+            <input type="url" class="form-control" ng-model="ectl.title.Poster" placeholder="Poster URL" id="poster">
+        </div>
+        <div class="form-group">
+            <label for="metascore">MetaScore</label>
+            <input type="text" class="form-control" ng-model="ectl.title.Metascore" placeholder="MetaScore" id="metascore">
+        </div>
+        <div class="form-group">
+            <label for="imdbrating">IMDB Rating</label>
+            <input type="text" class="form-control" ng-model="ectl.title.ImdbRating" placeholder="IMDB RATING" id="imdbrating">
+        </div>
+        <div class="form-group">
+            <label for="imdbvotes">IMDB Votes</label>
+            <input type="number" min="0" class="form-control" ng-model="ectl.title.ImdbVotes" placeholder="IMDB VOTES" id="imdbvotes">
+        </div>
+        <div class="form-group">
+            <label for="imdbid">IMDB ID</label>
+            <input type="text" class="form-control" ng-model="ectl.title.ImdbID" placeholder="IMDB ID" id="imdbid">
+        </div>
+
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary" ng-click="ectl.updateMovie(ectl.title.TitleId,ectl.title)">Update Title</button>
+        </div>
+    </form>
+</div>

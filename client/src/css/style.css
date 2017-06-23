@@ -1,0 +1,233 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: #141414;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:active {
+    text-decoration: none;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+.banner-home {
+    background-image: url("../images/banner_home.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.home-footer {
+    padding-bottom: 1.5em;
+}
+
+.movieflix {
+    font-family: "Agency FB";
+    color: red;
+    font-size: 4.33em;
+    font-weight: bold;
+}
+
+.navbar {
+    border-radius: 0px;
+}
+
+.navbar-brand {
+    color: red;
+    font-size: 3.2em;
+    font-weight: bold;
+    font-family: "Agency FB";
+}
+
+.brandcolor {
+    color: red;
+}
+
+.container {
+    color: white;
+}
+
+.col-md-2 {
+    transform: translate3d(0px, 0px, 10px);
+}
+
+.col-md-2:hover {
+    transform: scale(1.16);
+    transition: transform 0.7s;
+
+}
+
+@media(max-width:480px){
+    .col-md-2 {
+        transform: translate3d(0px, 0px, 0px);
+    }
+
+    .col-md-2:hover{
+        transform: scale(1);
+        transition: transform 0s;
+    }
+}
+
+@media (max-width: 767px) {
+
+    .col-md-2 {
+        transform: translate3d(0px, 0px, 0px);
+    }
+
+    .col-md-2:hover{
+        transform: scale(1);
+        transition: transform 0s;
+    }
+}
+
+.moviebanner{
+    width: 100%;
+    height: 200px;
+}
+
+.footer {
+    margin-top: 25px;
+    /*background-color: #141414;*/
+}
+
+.top {
+    margin-top: 50px;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.sorting-bar {
+    margin-top: 15px;
+    float: right;
+    display: inline-block;
+    margin-bottom: 50px;
+}
+
+.sorting-bar-home {
+    margin-top: 15px;
+    float: right;
+    display: inline-block;
+}
+
+.right {
+    float: right;
+    margin-bottom: 25px;
+}
+
+.breadcrumb {
+    background-color: #141414;
+}
+
+p span{
+    display: block;
+}
+
+.star{
+    display: inline;
+    unicode-bidi: bidi-override;
+    direction: rtl;
+    float: left;
+}
+
+.star input[type=radio]{
+display: none;
+}
+
+.star label{
+   direction: ltr;
+}
+
+.star label:before{
+    content:'\2605';
+    color: red;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.star label:hover:before,
+.star label:hover ~ label:before,
+.star input:checked ~ label:before{
+    color: yellow;
+}
+
+
+
+.thumbnail{
+    padding: 2px;
+}
+
+#sections.container-fluid{
+    margin-left: 0px;
+    margin-right: 0px;
+    padding: 0px;
+}
+
+#section1{
+    padding-top: 60px;
+    height: 750px;
+    background-color: #2aabd2;
+    color: #204d74;
+}
+
+#section2{
+    padding-top: 90px;
+    height: 750px;
+    background-color: #FFEF85;
+            /*#2aabd2;*/
+}
+
+#section3{
+    padding-top: 90px;
+    height: 750px;
+    background-color: #717171;
+            /*#8a6d3b;*/
+}
+
+.col-md-offset-4{
+    padding: 15px;
+    background-color: #f3f3f3;
+    color: #0f0f0f;
+    border-radius: 4px;
+}
+
+#table.container{
+    height: 600px;
+}
+
+.table{
+    background-color: #FFEF85;
+    color: #0f0f0f;
+    border-radius: 4px;
+}
+
+thead{
+    background-color: #eb9316;
+}
+
+th{
+    text-align: center;
+}
+
+img.media-object{
+    width:64px;
+    height: 64px;
+}
+
+.bottom{
+    margin-bottom: 60px;
+}
+
+.black{
+    color: #0f0f0f;
+}
+
+.addTitle {
+    margin-bottom: 15px;
+}

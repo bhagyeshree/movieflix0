@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Movieflix website to watch movies and series online">
+    <meta name="keywords" content="Movieflix, online movies, online series">
+    <meta name="author" content="Koushik Chaganti">
+    <title>MovieFlix :: Watch Movies online, Watch Series online</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#section1"><span class="brandcolor">MovieFlix</span></a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#section2"><span class="glyphicon glyphicon-log-in"></span> Sign In</a></li>
+                <li><a href="#section3"><span class="glyphicon glyphicon-pencil"></span> Sign Up</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="container-fluid top" id="sections">
+
+    <!-- Section1   -->
+    <div id="section1" class="banner-home text-center">
+        <p class="movieflix">MovieFlix</p>
+        <h3><strong>WELCOME TO YOUR HOME THEATRE</strong></h3>
+    </div>
+
+    <!-- Section2   -->
+    <div id="section2">
+        <div class="container">
+            <div class="row">
+               <div class="col-md-4 col-md-offset-4">
+                    <h2 class="text-center">Sign In</h2>
+                   <form method="post" action="home.html">
+                       <div class="form-group">
+                           <label for="email">Email</label>
+                           <input type="email" class="form-control" placeholder="Email" id="email" required>
+                       </div>
+                       <div class="form-group">
+                           <label for="userpassword">Password</label>
+                           <input type="password" class="form-control" placeholder="Password" id="userpassword" required>
+                       </div>
+                       <div class="form-group">
+                           <button class="btn btn-danger btn-block">Login</button>
+                       </div>
+                       <div class="form-group">
+                           <a title="Reset Password" href="#">Forgot Password?</a>
+                       </div>
+                   </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section3   -->
+    <div id="section3">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-md-offset-4">
+                    <h2 class="text-center">Sign Up</h2>
+                    <form>
+                        <div class="form-group">
+                            <label for="firstName">First Name</label>
+                            <input type="text" class="form-control" placeholder="First Name" id="firstName">
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last Name</label>
+                            <input type="text" class="form-control" placeholder="Last Name" id="lastName">
+                        </div>
+                        <div class="form-group">
+                            <label for="useremail">Email</label>
+                            <input type="email" class="form-control" placeholder="Email" id="useremail">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" class="form-control" placeholder="Password" id="password">
+                        </div>
+                        <div class="form-group">
+                            <label for="confirm-password">Confirm Password</label>
+                            <input type="password" class="form-control" placeholder="Confirm Password" id="confirm-password">
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-success btn-block">Sign Up</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="navbar-fixed-bottom home-footer">
+    <p class="text-center"><strong>&copy; All Copyright's Reserved 2016</strong></p>
+</footer>
+<script src="js/jquery/3.1.1/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>

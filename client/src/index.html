@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="movieflix">
+<head>
+    <base href="/">
+    <meta charset="UTF-8">
+    <meta name="description" content="Movieflix website to watch movies and series online">
+    <meta name="keywords" content="Movieflix, online movies, online series">
+    <meta name="author" content="Koushik Chaganti">
+    <title>Home - Movieflix</title>
+
+    <!-- bower:css -->
+    <!-- endinject -->
+
+    <!-- vendor:css -->
+    <!-- endinject -->
+
+    <!-- inject:css -->
+    <!-- endinject -->
+
+    <!-- app:css -->
+    <!-- endinject -->
+
+</head>
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top" ng-controller="NavbarController as nav">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#"><span class="brandcolor">MovieFlix</span></a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+                <li ng-class="{active: isActive('/home')}"><a ng-href="index.html#!/home">Home</a></li>
+                <li ng-class="{active: isActive('/movies')}"><a ng-href="index.html#!/movies">Movies</a></li>
+                <li ng-class="{active: isActive('/series')}"><a ng-href="index.html#!/series">Series</a></li>
+                <li ng-class="{active: isActive('/signup')}"><a ng-href="index.html#!/signup">SignUp</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Koushik Name
+                        <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Your Account</a></li>
+                        <li><a href="#">Sign out</a></li>
+                    </ul>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+<ng-view></ng-view>
+<div class="container-fluid"></div>
+<footer class="navbar navbar-fixed-bottom">
+    <div class="container">
+        <p class="text-center">&copy;&nbsp;All Copyights Reserved&nbsp;2016</p>
+    </div>
+</footer>
+<!-- bower:js -->
+<!-- endinject -->
+
+<!-- vendor:js -->
+<!-- endinject -->
+
+<!-- inject:js -->
+<!-- endinject -->
+
+<!-- app:js -->
+<!-- endinject -->
+
+</body>
+</html>
